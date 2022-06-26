@@ -53,8 +53,8 @@ global.websitex = "https://chat.whatsapp.com/C3mbk4fnGHW3LbEEtFgj8T" //ur websit
 global.vidmenu = { url: 'https://telegra.ph/file/fe3a0e1eb5ee41bb82df1.mp4' } //gif and video menu
 global.packname = "@ ALVYN-BOTZ"
 global.author = "ｖｙｎｕｔｚｘｘ２２"
-global.themeemoji = "🐶"
-global.reactmoji = "😘"
+global.themeemoji = "❑"
+global.reactmoji = "😭"
 global.ownertag = ['62859193578139'] //ur owner tag
 global.ownernummenu = ['62859193578139'] //ur owner number in menu and all
 global.watermark = "『  𝐀𝐋𝐕𝐘𝐍-𝐁𝐎𝐓𝐙  』" //ur watermark
@@ -67,6 +67,7 @@ global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
 global.log0 = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur logo pic
 global.err4r = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur error pic
 global.thumb = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
+global.qrdana = fs.readFileSync("./XeonMedia/theme/donasi.png") //ur thumb pic
 
 //database
 global.ntilinkytvid = []
