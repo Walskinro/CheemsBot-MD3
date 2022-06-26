@@ -1638,7 +1638,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
           { urlButton: { displayText: `👥 Join Group Bot`, url : `${websitex}` } },
             { urlButton: { displayText: `🌐 My Instagram`, url: `${socialm}` } },
              { quickReplyButton: { displayText: `💰Sewa Bot`, id: 'donasi'} },
-            { quickReplyButton: { displayText: `👤 Owner`, id: 'owner'} }
+            { quickReplyButton: { displayText: `👤 Owner`, id: 'owner'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} }
           ]
           XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
@@ -1654,7 +1654,7 @@ let buttonmenu = [
           { urlButton: { displayText: `👥 Join Group Bot`, url : `${websitex}` } },
             { urlButton: { displayText: `🌐 My Instagram`, url: `${socialm}` } },
              { quickReplyButton: { displayText: `💰Sewa Bot`, id: 'donasi'} },
-            { quickReplyButton: { displayText: `👤 Owner`, id: 'owner'} }
+            { quickReplyButton: { displayText: `👤 Owner`, id: 'owner'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} }
           ]
           XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
