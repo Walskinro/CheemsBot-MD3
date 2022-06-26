@@ -6436,8 +6436,8 @@ let search = await yts(text)
 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
 let ytvc = await hx.youtube(anu.url)
 let buttons = [
-{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `.ytmp4 ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `.ytmp3 ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
@@ -6465,7 +6465,7 @@ sourceUrl: anu.url
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
-case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
+case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmusic': {
    if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
 if (!args[0]) return reply(mess.linkm)
@@ -6479,8 +6479,8 @@ textyt = `*| YOUTUBE DOWNLOADER |*
 
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `ytvd ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${res.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `.ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `.ytmp3 ${res.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: {url:res.thumb},
@@ -6559,7 +6559,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female🙎🏻‍♀️` }, { quoted: m })
             }
       break
-        case 'ytmp3x':  case 'ytmusicx': {      
+        case 'ytmp3':  case 'ytmusic': {      
                        if (isBan) return reply(mess.ban)
   if (isBanChat) return reply(mess.banChat)
                 let { yta } = require('./lib/y2mate')
@@ -6571,10 +6571,10 @@ if (isBanChat) return reply(mess.banChat)
                 let caption = `*YOUTUBE MUSIC*\n\n*${themeemoji}Title :* ${media.title}\n*${themeemoji}File size :* ${media.filesizeF}\n*${themeemoji}Url :* ${isUrl(text)}\n*${themeemoji}Ext :* MP3\n*${themeemoji}Resolution :* ${args[1] || '128kbps'}`
                 buf = await getBuffer(media.thumb)
                 XeonBotInc.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${caption}` }, { quoted: m }).catch((err) => reply(mess.error))                
-                XeonBotInc.sendMessage(m.chat, {audio:{url:media.dl_link}, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{title:media.title,body:"YOUTUBE MP3",mediaType:"2",thumbnail:buf,mediaUrl:`${text}`}}}).catch((err) => reply(mess.error))
+                XeonBotInc.sendMessage(m.chat, {document:{url:media.dl_link}, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{title:media.title,body:"YOUTUBE MP3",mediaType:"2",thumbnail:buf,mediaUrl:`${text}`}}}).catch((err) => reply(mess.error))
                 }
             break
-           case 'ytmp4x': case 'ytvideox': {
+           case 'ytmp4': case 'ytvideo': {
 if (isBan) return reply(mess.ban)
   if (isBanChat) return reply(mess.banChat)
                 let { ytv } = require('./lib/y2mate')
@@ -6587,6 +6587,7 @@ if (isBan) return reply(mess.ban)
                 var buf = await getBuffer(media.thumb)
                 XeonBotInc.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${capti}` }, { quoted: m })
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `Here you go!` }, { quoted: m }).catch((err) => reply(mess.error))
+                XeonBotInc.sendMessage(m.chat, { document: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4` }, { quoted: m }).catch((err) => reply(mess.error))
             }
             break
             case 'ytdl': {
