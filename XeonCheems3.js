@@ -1610,11 +1610,6 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'All Menu 🍱',
-                                    id: 'allmenu'
-                                }
-                            }, {
-                                quickReplyButton: {
                                     displayText: 'List Menu 🍢',
                                     id: 'command'
                                 }  
@@ -1642,7 +1637,6 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         let buttonmenu = [
         	{ urlButton: { displayText: `👥 Join Group Bot`, url : `${websitex}` } },
             { urlButton: { displayText: `🌐 My Web`, url: `${ytname}` } },
-            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
             { quickReplyButton: { displayText: `💰Sewa Bot`, id: 'donasi'} },
             { quickReplyButton: { displayText: `👤 Owner`, id: 'owner'} }
@@ -1659,7 +1653,6 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 let buttonmenu = [
         	{ urlButton: { displayText: `👥 Join Group Bot`, url : `${websitex}` } },
             { urlButton: { displayText: `🌐 My Web`, url: `${ytname}` } },
-            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
             { quickReplyButton: { displayText: `💰Sewa Bot`, id: 'donasi'} },
             { quickReplyButton: { displayText: `👤 Owner`, id: 'owner'} }
@@ -1671,7 +1664,7 @@ case 'sc': case 'script': case 'donate': case 'donasi': case 'cekupdate': case '
 if (isBanChat) return reply(mess.banChat)
 teks = `*「 ${global.botname} Script 」*\n\nWebsite: ${global.ytname}\nGitHub: ${global.botscript}\n\n———「 *DONASI* 」———\n\nHai kak ☺️ \nKalian bisa mendukung saya agar bot ini tetap aktif dan kalian bisa menggunakannya\nYang mau donasi bisa ke :  *0859193578139 (via DANA)*\nBerapapun donasi kalian akan sangat berarti 👍\n\nTerimakasih\n\n—「 *SEWA | RUN BOT* 」—\n\n*_SEWA BOT_* \nSewa bot untuk dimasukkan bot ke grup kamu sendiri dan bisa menggunakannya\n▷ Sewa Bot 5k (1 minggu)\n▷ Sewa Bot 15k (1 bulan)\n▷ Sewa Bot 25k (Permanen)\n\n*_JADI BOT_* \nJika ingin punya bot sendiri seperti punya saya\n▷ Jadi Bot 10k Tidak Owner (1 minggu)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 25k (1 bulan)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 50k (Permanen)\n\n*_JASA RUN BOT_*\nJika bingung cara menjalankan bot mu bisa pakai jasa run saya\n▷ Run Bot 3k (1 minggu)\n▷ Run Bot 5k (1 bulan)\n▷ Run Bot 10k (Permanen)\n\n*🏦 PAYMENT :*\n▷ DANA : 0859193578139 (Scan Kode QR Diatas)\n▷ Pulsa : 0859193578139\n\n*Minat? Langsung chat aja ya cuy 🐦*\n*Contact person Owner* :\nwa.me/62859193578139`
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu 🌺'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'Menu'}, type: 1}
 ]
 let buttonMessage = {
 image: thum,
