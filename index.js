@@ -186,7 +186,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
-body: `Jangan Lupa Baca Deskripsi Grup\nPatuhi Peraturan Grup Ya\n\nSemoga betah digrup ini 🤗`,
+body: `Baca Deskripsi Grup`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: `${ytname}`,
@@ -230,7 +230,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
-body: `Selamat Tinggal Beban Grup 😭🔫😤🦶\n\nJangan Semangat Tetap Putus Asa Dan Jadilah Beban Keluarga 😭`,
+body: `Selamat Tinggal Beban`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: `${ytname}`,
@@ -284,7 +284,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await XeonBotInc.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await XeonBotInc.getName(i + '@s.whatsapp.net')}\nFN:${global.ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${global.ytname}\nitem2.X-ABLabel:My Website\nitem3.URL:${global.socialm}\nitem3.X-ABLabel:My Instagram\nitem4.ADR:;;${global.location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await XeonBotInc.getName(i + '@s.whatsapp.net')}\nFN:${global.ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.URL:${global.ytname}\nitem2.X-ABLabel:My Website\nitem3.URL:${global.socialm}\nitem3.X-ABLabel:My Instagram\nitem4.ADR:;;${global.location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	XeonBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
